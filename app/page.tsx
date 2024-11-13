@@ -14,7 +14,6 @@ export default function Home() {
           height={38}
           priority
         />
-        <div className="size-10 bg-background-primary">oi</div>
         <ol className="list-inside list-decimal text-sm text-center sm:text-left">
           <li className="mb-2">
             Get started by editing{" "}
