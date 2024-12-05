@@ -1,5 +1,7 @@
 
 import Card from '@/components/card'
+import AboutMe from '@/components/aboutMe/'
+
 
 const arrayFic = [
   {
@@ -23,12 +25,13 @@ const arrayFic = [
 
 export default function Home() {
   return (
-    <div >
+    <div className='container mx-auto px-4'>
       <div>
         {arrayFic.map((item, index) => (
           <Card key={index} {...item} />
         ))}
       </div>
+        <AboutMe />
     </div>
   )
 }
