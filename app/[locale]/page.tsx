@@ -1,5 +1,6 @@
 
 import Card from '@/components/card'
+import {useTranslations} from 'next-intl';
 
 const arrayFic = [
   {
@@ -22,9 +23,14 @@ const arrayFic = [
 ]
 
 export default function Home() {
+  const t = useTranslations('HomePage');
+  const about = useTranslations('about');
+
   return (
     <div >
       <div>
+        <h1>{about()}</h1>
+
         {arrayFic.map((item, index) => (
           <Card key={index} {...item} />
         ))}
