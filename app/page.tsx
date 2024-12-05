@@ -1,5 +1,6 @@
 
 import Card from '@/components/card'
+import NavBar from '@/components/navbar'
 
 const arrayFic = [
   {
@@ -23,12 +24,15 @@ const arrayFic = [
 
 export default function Home() {
   return (
-    <div >
-      <div>
+    // px-4 md:px-0
+    <div className="bg-background-primary h-dvh ">
+      {/* <div>
         {arrayFic.map((item, index) => (
           <Card key={index} {...item} />
         ))}
-      </div>
+      </div> */}
+
+      <NavBar />
     </div>
   )
 }
