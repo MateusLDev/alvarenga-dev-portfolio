@@ -1,6 +1,6 @@
-
 import Card from '@/components/card'
-import {useTranslations} from 'next-intl';
+import NavBar from '@/components/navbar'
+import { useTranslations } from 'next-intl'
 
 const arrayFic = [
   {
@@ -19,14 +19,17 @@ const arrayFic = [
     AndAt: 'Data de Término',
     description: 'Descrição',
     list: ['Tecnologias', 'Tecnologias 2', 'Tecnologias 3', 'Tecnologias 4', 'Tecnologias 5']
-  },
+  }
 ]
 
 export default function Home() {
-  const t = useTranslations('HomePage');
-  const about = useTranslations('about');
+  const t = useTranslations('HomePage')
+  const about = useTranslations('about')
 
   return (
+    // px-4 md:px-0
+    <div className="bg-background-primary h-dvh container mx auto">
+      {/* <div>
     <div >
       <div>
         <h1>{about()}</h1>
@@ -34,7 +37,13 @@ export default function Home() {
         {arrayFic.map((item, index) => (
           <Card key={index} {...item} />
         ))}
-      </div>
+      </div> */}
+
+
+      <NavBar />
+      {arrayFic.map((item, index) => (
+        <Card key={index} {...item} />
+      ))}
     </div>
   )
 }

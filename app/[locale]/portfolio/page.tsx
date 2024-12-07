@@ -1,7 +1,9 @@
+import NavBar from "@/components/navbar"
+
 const Portfolio = () => {
   return (
     <div>
-      Portfolio
+      <NavBar />
     </div>
   )
 }
