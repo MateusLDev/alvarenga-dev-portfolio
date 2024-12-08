@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
         className="mb-4 lg:hidden block"
       />
       
-      <div className="max-w-lg">
+      <div className="max-w-lg" data-aos="fade-right">
         <h1 className="text-white-500 text-3xl lg:text-5xl text-center lg:text-left font-semibold leading-snug">
           Hi, I’m <span className="text-primary">Lucas Alvarenga</span> and I craft beautiful &
           optimized apps.
@@ -30,6 +30,7 @@ const Hero: React.FC = () => {
       </div>
 
       <Image
+        data-aos="fade-left"
         src="/images/hero-image.png"
         alt="Imagem do Lucas Alvarenga"
         height={100}
