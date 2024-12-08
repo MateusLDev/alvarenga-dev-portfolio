@@ -1,6 +1,7 @@
 import Card from '@/components/card'
+import Hero from '@/components/hero'
 import NavBar from '@/components/navbar'
-import { useTranslations } from 'next-intl'
+// import { useTranslations } from 'next-intl'
 
 const arrayFic = [
   {
@@ -23,12 +24,12 @@ const arrayFic = [
 ]
 
 export default function Home() {
-  const t = useTranslations('HomePage')
-  const about = useTranslations('about')
+  // const t = useTranslations('HomePage')
+  // const about = useTranslations('about')
 
   return (
     // px-4 md:px-0
-    <div className="bg-background-primary h-dvh container mx auto">
+    <div className="bg-background-primary h-dvh container mx-auto">
       {/* <div>
     <div >
       <div>
@@ -39,11 +40,11 @@ export default function Home() {
         ))}
       </div> */}
 
-
       <NavBar />
-      {arrayFic.map((item, index) => (
-        <Card key={index} {...item} />
-      ))}
+
+      <div className="mt-36">
+        <Hero />
+      </div>
     </div>
   )
 }
