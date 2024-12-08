@@ -1,4 +1,6 @@
 import Card from '@/components/card'
+import AboutMe from '@/components/aboutMe/'
+
 import Hero from '@/components/hero'
 import NavBar from '@/components/navbar'
 // import { useTranslations } from 'next-intl'
@@ -33,7 +35,6 @@ export default function Home() {
       {/* <div>
     <div >
       <div>
-        <h1>{about()}</h1>
 
         {arrayFic.map((item, index) => (
           <Card key={index} {...item} />
@@ -44,6 +45,7 @@ export default function Home() {
 
       <div className="mt-36">
         <Hero />
+        <AboutMe />
       </div>
     </div>
   )

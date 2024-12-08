@@ -28,3 +28,7 @@ body {
     --gray-500: 190 141 141;
   }
 }
+
+html {
+  @apply bg-background-primary;
+}
