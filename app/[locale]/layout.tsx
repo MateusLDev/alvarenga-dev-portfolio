@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
+import { AOSInit } from './aos'
 
 const DMSans = localFont({
   src: '../fonts/DMSans-VariableFont.ttf',
@@ -35,6 +36,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <NextIntlClientProvider messages={messages}>
+        <AOSInit />
         <body className={`${DMSans.variable} antialiased`}>{children}</body>
       </NextIntlClientProvider>
     </html>

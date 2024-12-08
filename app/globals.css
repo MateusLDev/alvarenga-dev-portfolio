@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: var(--bg-primary);
+}
+
 @layer base {
+  html {
+    @apply bg-background-primary;
+  }
+
   :root {
     --primary: 0 159 227;
-    
+
     --bg-primary: 22 22 22;
     --bg-secondary: 32 32 32;
     --bg-tertiary: 41 41 41;
