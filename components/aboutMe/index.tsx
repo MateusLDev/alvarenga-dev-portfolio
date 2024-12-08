@@ -73,7 +73,7 @@ const AboutMe = () => {
             August 2019, where I "documented" my journey from student to software developer.
           </p>
 
-          <div className="flex gap-5 mt-6">
+          <div className="flex gap-5 mt-6 cur">
             {SocialsLinks.map((item, index) => (
               <div onClick={() => openLink(item.link)} key={index}>
                 {item.icon}

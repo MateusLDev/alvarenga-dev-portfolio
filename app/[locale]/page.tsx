@@ -24,9 +24,11 @@ const arrayFic = [
 ]
 
 export default function Home() {
+
   return (
     <div className='container mx-auto px-4'>
       <div>
+
         {arrayFic.map((item, index) => (
           <Card key={index} {...item} />
         ))}
