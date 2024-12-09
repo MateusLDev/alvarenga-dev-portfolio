@@ -1,7 +1,10 @@
 {
-  "HomePage": {
-    "title": "Ola mundo!",
-    "about": "Go to the about page"
+  "hero": {
+    "saudation": "Opa, me chamo",
+    "saudation2": "e crio aplicações fantásticas e optimizadas.",
+    "description": "Sou Desenvolvedor Android, Palestrante e Criador de conteúdo no",
+    "mentoringButton": "Participar da mentoria",
+    "cvButton": "Baixar meu currículo"
   },
   "AboutPage": "Sobre"
 }

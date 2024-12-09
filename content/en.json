@@ -1,7 +1,10 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "hero": {
+    "saudation": "Hi, I'm",
+    "saudation2": "and I craft beautiful & optimized apps.",
+    "description": "I'm Mobile developer, Speaker and Content creator at",
+    "mentoringButton": "Enter my mentoring",
+    "cvButton": "Download my CV"
   },
   "AboutPage": "About"
 }
