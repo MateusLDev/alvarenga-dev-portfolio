@@ -16,7 +16,7 @@ const NavBar = () => {
 
   return (
     <div
-      className="bg-[#FFFFFF] bg-opacity-10 backdrop-blur-sm border border-white-500 border-opacity-5 rounded-full flex items-center justify-between py-4 px-8 fixed top-10 w-full md:max-w-[700px] md:left-2/4 md:-translate-x-2/4"
+      className="bg-[#FFFFFF] bg-opacity-10 backdrop-blur-sm border border-white-500 border-opacity-5 rounded-full flex items-center justify-between py-4 px-8 fixed top-10 w-full md:max-w-[700px] md:left-2/4 md:-translate-x-2/4 z-10"
     >
       <div>
         <Image

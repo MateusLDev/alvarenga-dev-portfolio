@@ -3,6 +3,7 @@ import AboutMe from '@/components/aboutMe/'
 
 import Hero from '@/components/hero'
 import NavBar from '@/components/navbar'
+import Carrer from '@/components/carrer/page'
 // import { useTranslations } from 'next-intl'
 
 const arrayFic = [
@@ -46,6 +47,7 @@ export default function Home() {
       <div className="mt-36">
         <Hero />
         <AboutMe />
+        <Carrer />
       </div>
     </div>
   )
