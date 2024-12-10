@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Button from '../button'
 import { useTranslations } from 'next-intl'
+import { openLink } from '@/utils/utils'
 
 const Hero: React.FC = () => {
   const t = useTranslations('hero')
@@ -13,7 +14,7 @@ const Hero: React.FC = () => {
         width={140}
         className="mb-4 lg:hidden block"
       />
-      
+
       <div className="max-w-lg" data-aos="fade-right">
         <h1 className="text-white-500 text-3xl lg:text-5xl text-center lg:text-left font-semibold leading-snug">
           {t('saudation')} <span className="text-primary">Lucas Alvarenga</span> {t('saudation2')}
@@ -25,7 +26,11 @@ const Hero: React.FC = () => {
         </p>
 
         <div className="flex items-center justify-center lg:justify-normal gap-6 mt-7">
-          <Button color="primary" text={t('mentoringButton')} />
+          <Button
+            onClick={() => openLink('https://superpeer.com/alvarengadev')}
+            color="primary"
+            text={t('mentoringButton')}
+          />
           <Button color="secondary" text={t('cvButton')} />
         </div>
       </div>

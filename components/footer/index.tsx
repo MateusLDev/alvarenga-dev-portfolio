@@ -3,7 +3,7 @@ import { SocialsLinks, footerData } from '@/content/data'
 import { openLink } from '@/utils/utils'
 import Image from 'next/image'
 
-import { useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl'
 
 // const SocialsLinks = [
 //   {
@@ -34,7 +34,7 @@ import { useTranslations } from 'next-intl';
 // ]
 
 const Footer: React.FC = () => {
-  const t = useTranslations('footer');
+  const t = useTranslations('footer')
 
   const MAVUE_DEV = 'https://www.mavuedev.com/'
   const TG_DEV = 'https://portfolio-novo-qrrj.vercel.app/'
@@ -51,10 +51,10 @@ const Footer: React.FC = () => {
               alt="logo"
               className="mx-auto md:mx-0"
             />
-            <p className="text-white-300 mt-2 italic text-sm text-center md:text-left">
-              "We shouldn't do things expecting something in return. <br /> Do what needs to be done
-              and the reward will come naturally in its time."
-            </p>
+            <p
+              className="text-white-300 mt-2 italic text-sm text-center md:text-left"
+              dangerouslySetInnerHTML={{ __html: t.raw('message') }}
+            ></p>
           </div>
 
           <div className="flex flex-col mx-auto md:mx-0">
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between pt-6">
           <p className="text-white-300">© {t('copyright')}</p>
           <p className="text-white-300">
-            {t('developedBy')} {' '}
+            {t('developedBy')}{' '}
             <span
               onClick={() => openLink(MAVUE_DEV)}
               className="text-primary cursor-pointer hover:underline"
