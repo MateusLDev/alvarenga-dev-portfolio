@@ -5,34 +5,6 @@ import Image from 'next/image'
 
 import { useTranslations } from 'next-intl'
 
-// const SocialsLinks = [
-//   {
-//     name: 'Instagram',
-//     icon: <FaInstagram size={24} className="text-gray-500 hover:text-white-500 cursor-pointer" />,
-//     link: 'https://www.instagram.com/alvarenga.dev/'
-//   },
-//   {
-//     name: 'LinkedIn',
-//     icon: <FaLinkedinIn size={24} className="text-gray-500 hover:text-white-500 cursor-pointer" />,
-//     link: 'https://www.linkedin.com/in/llucasallvarenga/'
-//   },
-//   {
-//     name: 'GitHub',
-//     icon: <FaGithub size={24} className="text-gray-500 hover:text-white-500 cursor-pointer" />,
-//     link: 'https://github.com/Alvarenga-Dev'
-//   },
-//   {
-//     name: 'YouTube',
-//     icon: <FaYoutube size={24} className="text-gray-500 hover:text-white-500 cursor-pointer" />,
-//     link: 'https://www.youtube.com/channel/UCefw6voAiaqil3KAqMfLPyg/about'
-//   },
-//   {
-//     name: 'Twitch',
-//     icon: <FaTwitch size={24} className="text-gray-500 hover:text-white-500 cursor-pointer" />,
-//     link: 'https://www.twitch.tv/alvarengadev'
-//   }
-// ]
-
 const Footer: React.FC = () => {
   const t = useTranslations('footer')
 

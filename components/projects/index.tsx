@@ -1,10 +1,9 @@
 'use client'
-import { projectsData } from '@/content/data'
 import { openLink } from '@/utils/utils'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { FaArrowRight } from 'react-icons/fa'
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules'
-import { useTranslations } from 'next-intl'
 
 import 'swiper/css'
 import 'swiper/css/navigation'

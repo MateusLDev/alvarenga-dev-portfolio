@@ -6,7 +6,11 @@
     "mentoringButton": "Participar da mentoria",
     "cvButton": "Baixar meu currículo"
   },
-  "AboutPage": "Sobre",
+
+  "about": {
+    "title": "Sobre mim",
+    "content": "Como já devem ter reparado, o meu nome é Lucas Alvarenga, ou também conhecido como Alvarenga! Sou um desenvolvedor Android autodidata altamente motivado e experiente, com quase 4 anos de experiência no desenvolvimento de aplicativos móveis de alta qualidade. Forte capacidade de projetar, desenvolver e testar aplicativos Android, com conhecimento profundo de linguagens de programação, bibliotecas e frameworks relevantes. Excelente capacidade de resolução de problemas, colaboração em equipa e auto-gestão. Procuro contribuir para o sucesso da empresa fornecendo soluções eficientes no desenvolvimento Android.. <br /><br /> Comecei a programar aos 13 anos, precisamente com Android, mas utilizando Java em 2017. Como eu estava perto de entrar no ensino médio, queria cursar uma escola técnica. Então, no ano seguinte, me matriculei na escola técnica Rezende Rammel para fazer um curso de informática. Foram 3 anos incríveis, pois aumentei meus conhecimentos na área. Mesmo focando bastante em Java e, posteriormente, em Kotlin, pude ter contato com outras linguagens como JavaScript, Php, C, Pascal e Frameworks como React.Js e Flutter. <br /><br /> Quando o ano de 2020 chegou, eu estava decidido a começar minha carreira como desenvolvedor Android de uma vez por todas, então passei por muitos processos seletivos e entrevistas até conseguir um estágio e ser contratado em apenas 3 meses. Nesse meio tempo, sou criador de conteúdo de tecnologia desde agosto de 2019, onde “documentei” minha jornada de estudante a desenvolvedor de software. <br /><br />"
+  },
 
   "carrer": {
     "title": "Carreira",
