@@ -17,7 +17,7 @@ export default function Home() {
         <NavBar />
 
         <div className="mt-36">
-          <div className="container mx-auto">
+          <div className="container mx-auto mb-20">
             <Hero />
             <AboutMe />
             <Carrer />
