@@ -35,6 +35,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      
       <NextIntlClientProvider messages={messages}>
         <AOSInit />
         <body className={`${DMSans.variable} antialiased`}>{children}</body>
