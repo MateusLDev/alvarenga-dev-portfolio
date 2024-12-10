@@ -1,35 +1,7 @@
 'use client'
-import Image from 'next/image'
-import { FaInstagram, FaYoutube, FaGithub, FaLinkedinIn, FaTwitch } from 'react-icons/fa'
+import { SocialsLinks } from '@/content/data'
 import { openLink } from '@/utils/utils'
-
-const SocialsLinks = [
-  {
-    name: 'Instagram',
-    icon: <FaInstagram size={24} className="text-white-200 hover:text-white-500 cursor-pointer" />,
-    link: 'https://www.instagram.com/alvarenga.dev/'
-  },
-  {
-    name: 'LinkedIn',
-    icon: <FaLinkedinIn size={24} className="text-white-200 hover:text-white-500 cursor-pointer" />,
-    link: 'https://www.linkedin.com/in/llucasallvarenga/'
-  },
-  {
-    name: 'GitHub',
-    icon: <FaGithub size={24} className="text-white-200 hover:text-white-500 cursor-pointer" />,
-    link: 'https://github.com/Alvarenga-Dev'
-  },
-  {
-    name: 'YouTube',
-    icon: <FaYoutube size={24} className="text-white-200 hover:text-white-500 cursor-pointer" />,
-    link: 'https://www.youtube.com/channel/UCefw6voAiaqil3KAqMfLPyg/about'
-  },
-  {
-    name: 'Twitch',
-    icon: <FaTwitch size={24} className="text-white-200 hover:text-white-500 cursor-pointer" />,
-    link: 'https://www.twitch.tv/alvarengadev'
-  }
-]
+import Image from 'next/image'
 
 const AboutMe = () => {
   return (
@@ -71,11 +43,17 @@ const AboutMe = () => {
           </p>
 
           <div className="flex gap-5 mt-6 cursor-pointer">
-            {SocialsLinks.map((item, index) => (
-              <div onClick={() => openLink(item.link)} key={index}>
-                {item.icon}
-              </div>
-            ))}
+            {SocialsLinks.map((item, index) => {
+              const Icon = item.icon
+              return (
+                <Icon
+                  onClick={() => openLink(item.link)}
+                  key={index}
+                  size={24}
+                  className="text-gray-500 hover:text-white-500 cursor-pointer"
+                />
+              )
+            })}
           </div>
         </div>
 

@@ -6,5 +6,98 @@
     "mentoringButton": "Participar da mentoria",
     "cvButton": "Baixar meu currículo"
   },
-  "AboutPage": "Sobre"
+  "AboutPage": "Sobre",
+
+  "carrer": {
+    "title": "Carreira",
+    "description": "Abaixo está um resumo do meu currículo, experiência profissional e educação.",
+    "experiencesTitle": "Experiências Profissionais",
+    "experiences": {
+      "experience1": {
+        "title": "Desenvolvedor Android",
+        "list": [
+          "Modularização e implementação da arquitetura MVVM",
+          "Bibliotecas do Android Jetpack",
+          "Detekt",
+          "AWS",
+          "Jira",
+          "Acessibilidade"
+        ],
+        "local": "Itaú (@BRQ)",
+        "icon": "/itau.svg",
+        "startAt": "Dez 2023",
+        "endAt": "Atualmente"
+      },
+      "experience2": {
+        "title": "Desenvolvedor Android Pleno",
+        "list": [
+          "Modularização e aplicação da arquitetura MVVM",
+          "Criação de testes unitários com JUnit 5 e MockK",
+          "Bibliotecas do Android Jetpack",
+          "Participação no processo de Design/Discovery",
+          "Integração com RESTful APIs",
+          "Detekt"
+        ],
+        "local": "Bornlogic",
+        "icon": "/bornlogic.svg",
+        "startAt": "Jul 2022",
+        "endAt": "Mai 2023"
+      },
+      "experience3": {
+        "title": "Desenvolvedor Android júnior",
+        "list": [
+          "Criação de novas funcionalidades definidas pela equipe",
+          "Unit tests with JUnit 5 + MockK",
+          "Android Jetpack libs",
+          "Detekt",
+          "Integração com RESTful APIs",
+          "Zendesk integration"
+        ],
+        "local": "Bornlogic",
+        "icon": "/bornlogic.svg",
+        "startAt": "Jan 2021",
+        "endAt": "Jul 2022"
+      },
+      "experience4": {
+        "title": "Desenvolvedor Android Estagiário",
+        "list": [
+          "Criação de novas funcionalidades e correção de bugs",
+          "Firebase (Crashlytics, Messaging, App Distribution...)",
+          "Android Jetpack libs",
+          "Picasso, Glide",
+          "Android Jetpack libs"
+        ],
+        "local": "Bornlogic",
+        "icon": "/bornlogic.svg",
+        "startAt": "Set 2020",
+        "endAt": "Dez 2020"
+      }
+    },
+    "educationsTitle": "Educação",
+    "educations": {
+      "education1": {
+        "title": "Técnico em informática",
+        "description": "A ETRR ajuda-me a aprender sobre tecnologia. Tive a oportunidade de aprender desenvolvimento front-end, back-end e mobile.",
+        "local": "Escola técnica Rezende Rammel (ETRR), Brazil",
+        "icon": "/itau.svg",
+        "startAt": "2018",
+        "endAt": "2020"
+      },
+      "education2": {
+        "title": "Estudo vários cursos todos os anos",
+        "description": "Eu nunca paro de aprender! Acredito que a aprendizagem contínua é essencial para desbloquear o nosso potencial num mundo em constante mudança.",
+        "local": "",
+        "icon": "/itau.svg",
+        "startAt": "2017",
+        "endAt": "Sempre!"
+      }
+    }
+  },
+  
+  "footer": {
+    "message": "Não devemos fazer coisas à espera de algo em troca. Faça o que tem de ser feito e a recompensa virá naturalmente a seu tempo.",
+    "socialLinks": "Redes sociais",
+    "copyright": "Copyright alvarenga.dev. Todos os direitos reservados",
+    "developedBy": "Desenhado e desenvolvido por"
+  }
 }

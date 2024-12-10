@@ -1,13 +1,16 @@
 import Card from '../card'
 import Image from 'next/image'
-import ExperiencesImage from '/images/experiences-image.png'
 import { MdSchool } from 'react-icons/md'
-import { IoFlashOutline } from "react-icons/io5";
+import { IoFlashOutline } from 'react-icons/io5'
+import { useTranslations } from 'next-intl'
 
 const Carrer: React.FC = () => {
+  const t = useTranslations('carrer')
+  const experienceKeys = ['experience1', 'experience2', 'experience3', 'experience4'] as const
+  const educationKeys = ['education1', 'education2'] as const
   const experiences = [
     {
-      title: 'Android Developer',
+      title: t('experiences.experience1.title'),
       list: [
         'Modularization and of the MVVM architecture',
         'Android Jetpack libraries',
@@ -16,13 +19,13 @@ const Carrer: React.FC = () => {
         'Jira',
         'Accessibility'
       ],
-      local: 'Itaú (@BRQ)',
-      icon: '/itau.svg',
-      startAt: '2023',
-      AndAt: 'Currently'
+      local: t('experiences.experience1.local'),
+      icon: t('experiences.experience1.icon'),
+      startAt: t('experiences.experience1.startAt'),
+      AndAt: t('experiences.experience1.endAt')
     },
     {
-      title: 'Mid-Level Android Engineer',
+      title: t('experiences.experience2.title'),
       list: [
         'Modularization and of the MVVM architecture',
         'Creation of tests with JUnit 5 and MockK',
@@ -31,13 +34,13 @@ const Carrer: React.FC = () => {
         'Integration with RESTful APIs',
         'Detekt'
       ],
-      local: 'Bornlogic',
-      icon: '/bornlogic.svg',
-      startAt: 'Jul 2022',
-      AndAt: 'May 2023'
+      local: t('experiences.experience2.local'),
+      icon: t('experiences.experience2.icon'),
+      startAt: t('experiences.experience2.startAt'),
+      AndAt: t('experiences.experience2.endAt')
     },
     {
-      title: 'Junior Android Developer',
+      title: t('experiences.experience3.title'),
       list: [
         'Creation of new features defined by Squad',
         'Unit tests with JUnit 5 + MockK',
@@ -46,13 +49,13 @@ const Carrer: React.FC = () => {
         'Integration of RESTful APIs',
         'Zendesk integration'
       ],
-      local: 'Bornlogic',
-      icon: '/bornlogic.svg',
-      startAt: 'Jan 2021',
-      AndAt: 'Jul 2022'
+      local: t('experiences.experience3.local'),
+      icon: t('experiences.experience3.icon'),
+      startAt: t('experiences.experience3.startAt'),
+      AndAt: t('experiences.experience3.endAt')
     },
     {
-      title: 'Intern Android Developer',
+      title: t('experiences.experience4.title'),
       list: [
         'Creation of new features & bug fixes',
         'Firebase (Crashlytics, Messaging, App Distribution...)',
@@ -60,43 +63,41 @@ const Carrer: React.FC = () => {
         'Picasso, Glide',
         'Android Jetpack libs'
       ],
-      local: 'Bornlogic',
-      icon: '/bornlogic.svg',
-      startAt: 'Sep 2020',
-      AndAt: 'Dec 2022'
+      local: t('experiences.experience4.local'),
+      icon: t('experiences.experience4.icon'),
+      startAt: t('experiences.experience4.startAt'),
+      AndAt: t('experiences.experience4.endAt')
     }
   ]
 
   const educations = [
     {
-      title: 'Computer Technician',
-      description:
-        'The ETRR helps me learn about technology. I had the opportunity to learn front-end, back-end and mobile development.',
-      local: 'Technical School, Rezende Rammel (ETRR), Brazil',
+      title: t('educations.education1.title'),
+      description: t('educations.education1.description'),
+      local: t('educations.education1.local'),
       icon: <MdSchool className="text-white-500 text-lg" />,
-      startAt: '2018',
-      AndAt: '2020'
+      startAt: t('educations.education1.startAt'),
+      AndAt: t('educations.education1.endAt')
     },
     {
-      title: 'I study several courses every year',
-      description:
-        'I never stop learning! I believe that continuous learning is essential for unlocking our potential in a world of constant change.',
+      title: t('educations.education2.title'),
+      description: t('educations.education2.description'),
       local: '',
       icon: <IoFlashOutline className="text-white-500 text-lg" />,
-      startAt: '2017',
-      AndAt: 'Always'
+      startAt: t('educations.education2.startAt'),
+      AndAt: t('educations.education2.endAt')
     }
   ]
 
   return (
     <div className="mt-20">
-      <h1 className="text-white-500 font-semibold text-2xl text-center mb-1">Carrer</h1>
+      <h1 className="text-white-500 font-semibold text-2xl text-center mb-1">{t('title')}</h1>
       <p className="text-white-500 text-center">
-        Below is a summary of my career, professional experience and education.
+        {t('description')}
       </p>
 
-      <div className='mt-4 mb-4'>
-        <span className="text-white-500 font-semibold text-lg">Professional experience</span>
+      <div className="mt-4 mb-4">
+        <span className="text-white-500 font-semibold text-lg">{t('experiencesTitle')}</span>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 mt-4 gap-8">
           <Image
@@ -132,7 +133,7 @@ const Carrer: React.FC = () => {
       </div>
 
       <div>
-        <span className="text-white-500 font-semibold text-lg">Education</span>
+        <span className="text-white-500 font-semibold text-lg">{t('educationsTitle')}</span>
 
         <div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">

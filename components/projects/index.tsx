@@ -1,65 +1,18 @@
 'use client'
-import Image from 'next/image'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'
-import { FaArrowRight } from 'react-icons/fa'
+import { projectsData } from '@/content/data'
 import { openLink } from '@/utils/utils'
+import Image from 'next/image'
+import { FaArrowRight } from 'react-icons/fa'
+import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules'
 
-import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 const Projects: React.FC = () => {
-  const projects = [
-    {
-      name: 'Marketplace List',
-      description:
-        'This simple shopping list App helps you to create your list and already knowing the final value of the purchase!',
-      link: 'https://play.google.com/store/apps/details?id=com.alvarengadev.marketplacelist',
-      image: '/images/marketplace-list.png',
-      technologies: ['MVVM', 'Dagger Hilt', 'Firebase Crashlytics']
-    },
-    {
-      name: 'Movies Reviews',
-      description: 'Your/Dev Recruitment Process 2020 - Android Developer',
-      link: 'https://github.com/Alvarenga-Dev/Movie-Reviews',
-      image: '/images/movies-review.png',
-      technologies: ['Retrofit', 'Live Data', 'Room']
-    },
-    {
-      name: 'AlvaFlix',
-      description: 'A joke with my last name Alvarenga with netflix',
-      link: 'https://github.com/Alvarenga-Dev/Alvaflix',
-      image: '/images/alvaflix.png',
-      technologies: ['MVVM', 'Koin', 'Custom Components']
-    },
-    {
-      name: 'Crypto - UI/UX',
-      description:
-        'Fictional project from Felipe Santanas Figma Course (FEUX), with the aim of improving my knowledge in Figma Tool and also in UI and UX.',
-      link: 'https://www.figma.com/file/ei4iys8RFNzlXNswPVsBpI/Feux---NFT-App?node-id=404%3A5462',
-      image: '/images/crypto.png',
-      technologies: ['Figma', 'Components', 'Create Flows']
-    },
-    {
-      name: 'AlvaMessager',
-      description:
-        'This app was able to work deeper with firebase, using it as a means of creating a new messaging app (I guess in high school I wasnt creative with names).',
-      link: 'https://github.com/Alvarenga-Dev/Alva-Messenger',
-      image: '/images/alvamessager.png',
-      technologies: ['Kotlin', 'Firebase']
-    },
-    {
-      name: 'Time to Sleep',
-      description:
-        'This project was developed when I was in the 2nd year of high school, with the aim of being an alarm clock for the deaf!',
-      link: 'https://github.com/Alvarenga-Dev/Time-to-Sleep',
-      image: '/images/time-to-sleep.png',
-      technologies: ['Bluetooth Connection', 'Arch MVP', 'Java']
-    }
-  ]
-  return (
+    return (
     <div>
       <h1 className="text-white-500 font-semibold text-2xl text-center mb-1 mt-20">Projects</h1>
       <p className="text-white-500 text-center mx-10 mb-6">
@@ -88,7 +41,7 @@ const Projects: React.FC = () => {
         navigation
         pagination={{ clickable: true }}
       >
-        {projects.map((item, index) => {
+        {projectsData.map((item, index) => {
           return (
             <SwiperSlide key={index}>
               <div
