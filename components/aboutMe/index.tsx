@@ -1,38 +1,35 @@
 'use client'
 import Image from 'next/image'
 import { FaInstagram, FaYoutube, FaGithub, FaLinkedinIn, FaTwitch } from 'react-icons/fa'
+import { openLink } from '@/utils/utils'
 
 const SocialsLinks = [
   {
     name: 'Instagram',
-    icon: <FaInstagram size={24} color="white" />,
+    icon: <FaInstagram size={24} className="text-white-200 hover:text-white-500 cursor-pointer" />,
     link: 'https://www.instagram.com/alvarenga.dev/'
   },
   {
     name: 'LinkedIn',
-    icon: <FaLinkedinIn size={24} color="white" />,
+    icon: <FaLinkedinIn size={24} className="text-white-200 hover:text-white-500 cursor-pointer" />,
     link: 'https://www.linkedin.com/in/llucasallvarenga/'
   },
   {
     name: 'GitHub',
-    icon: <FaGithub size={24} color="white" />,
+    icon: <FaGithub size={24} className="text-white-200 hover:text-white-500 cursor-pointer" />,
     link: 'https://github.com/Alvarenga-Dev'
   },
   {
     name: 'YouTube',
-    icon: <FaYoutube size={24} color="white" />,
+    icon: <FaYoutube size={24} className="text-white-200 hover:text-white-500 cursor-pointer" />,
     link: 'https://www.youtube.com/channel/UCefw6voAiaqil3KAqMfLPyg/about'
   },
   {
     name: 'Twitch',
-    icon: <FaTwitch size={24} color="white" />,
+    icon: <FaTwitch size={24} className="text-white-200 hover:text-white-500 cursor-pointer" />,
     link: 'https://www.twitch.tv/alvarengadev'
   }
 ]
-
-const openLink = (link: string) => {
-  window.open(link, '_blank')
-}
 
 const AboutMe = () => {
   return (
