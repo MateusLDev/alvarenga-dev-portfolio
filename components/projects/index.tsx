@@ -4,6 +4,7 @@ import { openLink } from '@/utils/utils'
 import Image from 'next/image'
 import { FaArrowRight } from 'react-icons/fa'
 import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules'
+import { useTranslations } from 'next-intl'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -12,12 +13,57 @@ import 'swiper/css/scrollbar'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 const Projects: React.FC = () => {
-    return (
+  const t = useTranslations('projects')
+
+  const projectsData = [
+    {
+      name: t('project1.name'),
+      description: t('project1.description'),
+      link: t('project1.link'),
+      image: t('project1.image'),
+      technologies: ['MVVM', 'Dagger Hilt', 'Firebase Crashlytics']
+    },
+    {
+      name: t('project2.name'),
+      description: t('project2.description'),
+      link: t('project2.link'),
+      image: t('project2.image'),
+      technologies: ['Retrofit', 'Live Data', 'Room']
+    },
+    {
+      name: t('project3.name'),
+      description: t('project3.description'),
+      link: t('project3.link'),
+      image: t('project3.image'),
+      technologies: ['MVVM', 'Koin', 'Custom Components']
+    },
+    {
+      name: t('project4.name'),
+      description: t('project4.description'),
+      link: t('project4.link'),
+      image: t('project4.image'),
+      technologies: ['Figma', 'Components', 'Create Flows']
+    },
+    {
+      name: t('project5.name'),
+      description: t('project5.description'),
+      link: t('project5.link'),
+      image: t('project5.image'),
+      technologies: ['Kotlin', 'Firebase']
+    },
+    {
+      name: t('project6.name'),
+      description:  t('project6.description'),
+      link: t('project6.link'),
+      image: t('project6.image'),
+      technologies: ['Bluetooth Connection', 'Arch MVP', 'Java']
+    }
+  ]
+
+  return (
     <div>
-      <h1 className="text-white-500 font-semibold text-2xl text-center mb-1 mt-20">Projects</h1>
-      <p className="text-white-500 text-center mx-10 mb-6">
-        Here is a gallery with some projects that I developed over time.
-      </p>
+      <h1 className="text-white-500 font-semibold text-2xl text-center mb-1 mt-20">{t('title')}</h1>
+      <p className="text-white-500 text-center mx-10 mb-6">{t('description')}</p>
 
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}

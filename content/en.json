@@ -6,7 +6,9 @@
     "mentoringButton": "Enter my mentoring",
     "cvButton": "Download my CV"
   },
+  
   "AboutPage": "About",
+
   "carrer": {
     "title": "Carrer",
     "description": "Below is a summary of my career, professional experience and education.",
@@ -92,6 +94,7 @@
       }
     }
   },
+
   "projects": {
     "title": "Projects",
     "description": "Here is a gallery with some projects that I developed over time.",
@@ -160,7 +163,7 @@
         "Java"
       ]
     }
-  }
+  },
 
   "footer": {
     "message": "We shouldn't do things expecting something in return. Do what needs to be done and the reward will come naturally in its time.",
