@@ -8,11 +8,11 @@ const Hero: React.FC = () => {
   const t = useTranslations('hero')
 
   const downloadCV = () => {
-    const link = document.createElement("a");
-    link.href = "/cv.pdf";
-    link.download = "Lucas Alvarenga CV.pdf";
-    link.click();
-  };
+    const link = document.createElement('a')
+    link.href = '/cv.pdf'
+    link.download = 'Lucas Alvarenga CV.pdf'
+    link.click()
+  }
 
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center md:justify-around gap-10 lg:gap-20 mt-40 mb-20 bg-[url('/images/hero-bg-png')]">
@@ -31,10 +31,21 @@ const Hero: React.FC = () => {
 
         <p className="max-w-2xl font-medium text-base lg:text-lg text-center lg:text-left text-white-400 mt-5">
           {t('description')}
-          <span onClick={() => openLink('https://instagram.com/alvarenga.dev')} className="text-primary cursor-pointer"> @alvarenga.dev</span>
+          <span
+            onClick={() => openLink('https://instagram.com/alvarenga.dev')}
+            className="text-primary cursor-pointer"
+          >
+            {' '}
+            @alvarenga.dev
+          </span>
         </p>
 
-        <div className="flex items-center justify-center lg:justify-normal gap-6 mt-7">
+        <div
+          className="flex items-center justify-center lg:justify-normal gap-6 mt-7"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-offset="300"
+        >
           <Button
             onClick={() => openLink('https://superpeer.com/alvarengadev')}
             color="primary"

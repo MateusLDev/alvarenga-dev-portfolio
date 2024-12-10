@@ -8,7 +8,7 @@ const AboutMe = () => {
   const t = useTranslations('about')
 
   return (
-    <div className="bg-[#161616]">
+    <div className="bg-[#161616]" data-aos="fade-up">
       <p className="font-semibold text-white-400 text-center text-xl md:text-2xl">{t('title')}</p>
 
       <div className="flex flex-col md:flex-row-reverse gap-4">
@@ -18,7 +18,12 @@ const AboutMe = () => {
             dangerouslySetInnerHTML={{ __html: t.raw('content') }}
           ></p>
 
-          <div className="flex gap-5 mt-6 cursor-pointer">
+          <div
+            className="flex gap-5 mt-6 cursor-pointer"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-offset="300"
+          >
             {SocialsLinks.map((item, index) => {
               const Icon = item.icon
               return (
