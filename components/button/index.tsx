@@ -1,8 +1,10 @@
+'use client'
 import { tv } from 'tailwind-variants'
 
 interface ButtonProps {
   color: 'primary' | 'secondary'
   text: string
+  onClick: () => void
 }
 
 const button = tv({
@@ -18,8 +20,8 @@ const button = tv({
     color: 'primary'
   }
 })
-const Button: React.FC<ButtonProps> = ({ color, text }) => {
-  return <button className={button({ color })}>{text}</button>
+const Button: React.FC<ButtonProps> = ({ color, text, onClick }) => {
+  return <button onClick={() => onClick()} className={button({ color })}>{text}</button>
 }
 
 export default Button

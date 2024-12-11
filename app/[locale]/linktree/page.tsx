@@ -1,27 +1,30 @@
 'use client'
 import Image from 'next/image'
+import { openLink } from '@/utils/utils'
+import { SocialsLinks } from '@/content/data'
+
 const Linktree = () => {
   const socialsMedias = [
     {
-      name: 'Instagram',
-      url: 'https://github.com/MateusLDev/alvarenga-dev-portfolio/pull/8'
+      name: 'Portfólio',
+      link: '/pt/portfolio',
+      icon: ''
     },
-    {
-      name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/llucasallvarenga/'
-    }
+    ...SocialsLinks
   ]
 
-  const openLink = (url: string) => {
-    window.open(url, '_blank')
-  }
-
   return (
-    <div className="flex justify-center items-center flex-col h-screen w container">
-      <div className="border-4 rounded-full border-primary p-1">
-        <Image src="/images/linktreeImage.png" alt="fotoAlva" width={130} height={130} />
+    <div className="flex mt-20 items-center flex-col h-screen container">
+      <div className="border-4 rounded-full border-primary p-1" datos-aos="fade-up">
+        <Image
+          datos-aos="fade-up"
+          src="/images/linktreeImage.png"
+          alt="fotoAlva"
+          width={130}
+          height={130}
+        />
       </div>
-      <div className="items-center flex flex-col">
+      <div className="items-center flex flex-col" data-aos="fade-up" data-aos-duration="1000">
         <p className="text-xl text-white-500 font-semibold md:text-2xl mt-2">Lucas Alvarenga</p>
         <p className="text-sm text-primary md:font-normal md:text-base">Android developer</p>
         <p className="text-sm md:font-medium text-white-400 mt-6 md:text-base">
@@ -29,15 +32,19 @@ const Linktree = () => {
         </p>
       </div>
 
-      <div className="flex flex-col gap-4 mt-4 w-full md:w-auto md:min-w-96">
+      <div
+        className="flex flex-col gap-4 mt-4 w-full md:w-auto md:min-w-96"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom"
+      >
         {socialsMedias.map((media, index) => (
           <div
             key={index}
-            className="border-2 border-white rounded-xl p-4 flex items-center justify-center gap-3 cursor-pointer"
-            onClick={() => openLink(media.url)}
+            className="group border-2 border-white-100 hover:border-white-500 rounded-xl p-4 flex items-center justify-center gap-3 cursor-pointer"
+            onClick={() => openLink(media.link)}
           >
             <div>
-              <p className="text-white text-xl md:text-2xl font-bold">{media.name}</p>
+              <p className="text-white-100 group-hover:text-white-500 text-xl font-semibold">{media.name}</p>
             </div>
           </div>
         ))}

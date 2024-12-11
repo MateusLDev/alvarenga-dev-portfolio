@@ -1,11 +1,18 @@
 'use client'
 
+import { useRouter, usePathname } from '@/i18n/routing'
+import {useLocale} from 'next-intl';
+
+
 import Image from 'next/image'
 import { useState } from 'react'
 import { MdMenu, MdClose } from 'react-icons/md'
 
 const NavBar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
+  const router = useRouter()
+  const pathname = usePathname()
+  const locale = useLocale();
 
   const menuLinks = [
     { name: 'Home', href: '/' },
@@ -14,10 +21,12 @@ const NavBar = () => {
     { name: 'Projects', href: '/portfolio' }
   ]
 
+  const changeLanguage = () => {
+    router.replace(pathname, { locale: locale === 'pt' ? 'en' : 'pt' })
+  }
+
   return (
-    <div
-      className="bg-[#FFFFFF] bg-opacity-10 backdrop-blur-sm border border-white-500 border-opacity-5 rounded-full flex items-center justify-between py-4 px-8 fixed top-10 w-full md:max-w-[700px] md:left-2/4 md:-translate-x-2/4 z-10"
-    >
+    <div className="bg-background-primary bg-opacity-10 backdrop-blur-sm border border-[#FFFFFF26] rounded-full flex items-center justify-between py-4 px-8 fixed top-10 w-full md:max-w-[700px] md:left-2/4 md:-translate-x-2/4 z-10">
       <div>
         <Image
           className="h-6 w-full"
@@ -30,10 +39,14 @@ const NavBar = () => {
 
       <div className="flex items-center gap-4 cursor-pointer">
         {menuLinks.map((item) => (
-          <p className="text-white-200 hover:text-white-400 md:block hidden" key={item.name}>
+          <p className="text-white-400 hover:text-primary md:block hidden" key={item.name}>
             {item.name}
           </p>
         ))}
+        
+        <div onClick={() => changeLanguage()} className="bg-[#2d2d2d] border border-[#3c3c3c] rounded-full p-1 px-2 text-white block text-sm">
+          {locale === 'pt' ? 'EN' : 'BR'}
+        </div>
 
         <div
           className="bg-[#2d2d2d] border border-[#3c3c3c] rounded p-1 text-white block md:hidden"
@@ -51,7 +64,7 @@ const NavBar = () => {
             />
 
             {menuLinks.map((item) => (
-              <p className="text-white-200 text-2xl hover:text-white-400" key={item.name}>
+              <p className="text-white-400 text-2xl hover:text-primary" key={item.name}>
                 {item.name}
               </p>
             ))}

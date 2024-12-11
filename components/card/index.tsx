@@ -22,7 +22,7 @@ const Card: React.FC<CardProps> = ({
   return (
     <div className="bg-background-secondary p-4 border border-[#695e5e] rounded-lg w-full">
       <div className="flex gap-2">
-        <div className="bg-[#2D2D2D] border border-[#3C3C3C] rounded p-[5px]">
+        <div className="bg-[#2D2D2D] border border-[#3C3C3C] rounded p-[5px] h-fit">
           {typeof icon !== 'string' ? (
             icon
           ) : (
