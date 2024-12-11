@@ -1,5 +1,5 @@
 'use client'
-import { SocialsLinks, footerData } from '@/content/data'
+import { SocialsLinks } from '@/content/data'
 import { openLink } from '@/utils/utils'
 import Image from 'next/image'
 

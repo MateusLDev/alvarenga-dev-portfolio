@@ -1,9 +1,8 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 export const AOSInit = () => {
   const [isMounted, setIsMounted] = useState(false)
