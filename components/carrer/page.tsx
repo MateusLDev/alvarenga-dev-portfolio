@@ -6,8 +6,8 @@ import { useTranslations } from 'next-intl'
 
 const Carrer: React.FC = () => {
   const t = useTranslations('carrer')
-  const experienceKeys = ['experience1', 'experience2', 'experience3', 'experience4'] as const
-  const educationKeys = ['education1', 'education2'] as const
+  // const experienceKeys = ['experience1', 'experience2', 'experience3', 'experience4'] as const
+  // const educationKeys = ['education1', 'education2'] as const
   const experiences = [
     {
       title: t('experiences.experience1.title'),
