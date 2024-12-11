@@ -2,10 +2,9 @@
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
 export const AOSInit = () => {
-  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
     AOS.init({
