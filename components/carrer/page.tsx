@@ -113,11 +113,10 @@ const Carrer: React.FC = () => {
           <div>
             {experiences.map((item, index) => {
               return (
-                <div className="relative pl-8 py-4 group">
+                <div className="relative pl-8 py-4 group" key={index}>
                   <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300  before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-primary after:border-4 after:box-content after:border-primary after:rounded-full  after:-translate-x-1/2 after:translate-y-1.5">
                     <Card
                       data-aos="fade-left"
-                      key={index}
                       title={item.title}
                       list={item.list}
                       local={item.local}
