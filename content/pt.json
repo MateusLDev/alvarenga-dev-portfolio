@@ -112,65 +112,42 @@
       "description": "Esta simples aplicação de lista de compras irá ajuda-lo a criar a sua lista e saber o valor final da compra!",
       "link": "https://play.google.com/store/apps/details?id=com.alvarengadev.marketplacelist",
       "image": "/images/marketplace-list.png",
-      "technologies": [
-        "MVVM",
-        "Dagger Hilt",
-        "Firebase Crashlytics"
-      ]
+      "technologies": "MVVM, Dagger Hilt, Firebase Crashlytics"
     },
     "project2": {
       "name": "Movies Reviews",
       "description": "Your/Dev Processo Seletivo 2020 - Desenvolvedor Android",
       "link": "https://github.com/Alvarenga-Dev/Movie-Reviews",
       "image": "/images/movies-review.png",
-      "technologies": [
-        "Retrofit",
-        "Live Data",
-        "Room"
-      ]
+      "technologies": "Retrofit, Live Data, Room"
     },
     "project3": {
       "name": "AlvaFlix",
       "description": "Uma piada com o meu sobrenome Alvarenga com netflix",
       "link": "https://github.com/Alvarenga-Dev/Alvaflix",
       "image": "/images/alvaflix.png",
-      "technologies": [
-        "MVVM",
-        "Koin",
-        "Custom Components"
-      ]
+      "technologies": "MVVM, Koin, Componentes Customizados"
     },
     "project4": {
       "name": "Crypto - UI/UX",
       "description": "Projeto fictício do Curso Felipe Santanas Figma (FEUX), com o objetivo de aprimorar meus conhecimentos na ferramenta Figma e também em UI e UX.",
       "link": "https://www.figma.com/file/ei4iys8RFNzlXNswPVsBpI/Feux---NFT-App?node-id=404%3A5462",
       "image": "/images/crypto.png",
-      "technologies": [
-        "Figma",
-        "Components",
-        "Create Flows"
-      ]
+      "technologies": "Figma, Components,  Create Flows"
     },
     "project5": {
       "name": "AlvaMessager",
       "description": "Nesta aplicação foi capaz de trabalhar mais profundamente com o firebase, utilizando-o como um meio de criar uma nova aplicação de mensagens (acho que no liceu não era criativo com os nomes).",
       "link": "https://github.com/Alvarenga-Dev/Alva-Messenger",
       "image": "/images/alvamessager.png",
-      "technologies": [
-        "Kotlin",
-        "Firebase"
-      ]
+      "technologies": "Kotlin, Firebase"
     },
     "project6": {
       "name": "Time to Sleep",
       "description": "Este projeto foi desenvolvido quando eu estava no 2º ano do ensino médio, com o objetivo de ser um despertador para surdos!",
       "link": "https://github.com/Alvarenga-Dev/Time-to-Sleep",
       "image": "/images/time-to-sleep.png",
-      "technologies": [
-        "Bluetooth Connection",
-        "Arch MVP",
-        "Java"
-      ]
+      "technologies": "Conexão Bluetooth, Arq. MVP, Java"
     }
   },
   
