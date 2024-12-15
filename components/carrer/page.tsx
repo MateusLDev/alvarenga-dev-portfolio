@@ -11,14 +11,7 @@ const Carrer: React.FC = () => {
   const experiences = [
     {
       title: t('experiences.experience1.title'),
-      list: [
-        'Modularization and of the MVVM architecture',
-        'Android Jetpack libraries',
-        'Detekt',
-        'AWS',
-        'Jira',
-        'Accessibility'
-      ],
+      list: t('experiences.experience1.list').split('|'),
       local: t('experiences.experience1.local'),
       icon: t('experiences.experience1.icon'),
       startAt: t('experiences.experience1.startAt'),
@@ -26,14 +19,7 @@ const Carrer: React.FC = () => {
     },
     {
       title: t('experiences.experience2.title'),
-      list: [
-        'Modularization and of the MVVM architecture',
-        'Creation of tests with JUnit 5 and MockK',
-        'Android Jetpack libs',
-        'Participating in Design/Discovery processes',
-        'Integration with RESTful APIs',
-        'Detekt'
-      ],
+      list: t('experiences.experience2.list').split('|'),
       local: t('experiences.experience2.local'),
       icon: t('experiences.experience2.icon'),
       startAt: t('experiences.experience2.startAt'),
@@ -41,14 +27,7 @@ const Carrer: React.FC = () => {
     },
     {
       title: t('experiences.experience3.title'),
-      list: [
-        'Creation of new features defined by Squad',
-        'Unit tests with JUnit 5 + MockK',
-        'Android Jetpack libs',
-        'Detekt',
-        'Integration of RESTful APIs',
-        'Zendesk integration'
-      ],
+      list: t('experiences.experience3.list').split('|'),
       local: t('experiences.experience3.local'),
       icon: t('experiences.experience3.icon'),
       startAt: t('experiences.experience3.startAt'),
@@ -56,13 +35,7 @@ const Carrer: React.FC = () => {
     },
     {
       title: t('experiences.experience4.title'),
-      list: [
-        'Creation of new features & bug fixes',
-        'Firebase (Crashlytics, Messaging, App Distribution...)',
-        'Android Jetpack libs',
-        'Picasso, Glide',
-        'Android Jetpack libs'
-      ],
+      list: t('experiences.experience4.list').split('|'),
       local: t('experiences.experience4.local'),
       icon: t('experiences.experience4.icon'),
       startAt: t('experiences.experience4.startAt'),
