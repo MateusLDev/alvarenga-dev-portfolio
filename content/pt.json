@@ -1,4 +1,10 @@
 {
+  "navbar": {
+    "home": "Home",
+    "about": "Sobre mim",
+    "carrer": "Carreira",
+    "projects": "Projetos"
+  },
   "hero": {
     "saudation": "Opa, me chamo",
     "saudation2": "e crio aplicações fantásticas e optimizadas.",
