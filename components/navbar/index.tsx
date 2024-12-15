@@ -2,6 +2,7 @@
 
 import { useRouter, usePathname } from '@/i18n/routing'
 import {useLocale} from 'next-intl';
+import { useTranslations } from 'next-intl'
 
 
 import Image from 'next/image'
@@ -9,16 +10,17 @@ import { useState } from 'react'
 import { MdMenu, MdClose } from 'react-icons/md'
 
 const NavBar = () => {
+  const t = useTranslations('navbar')
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const router = useRouter()
   const pathname = usePathname()
   const locale = useLocale();
 
   const menuLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'About me', href: '/portfolio' },
-    { name: 'Career', href: '/portfolio' },
-    { name: 'Projects', href: '/portfolio' }
+    { name: t('home'), href: '/' },
+    { name: t('about'), href: '/portfolio' },
+    { name: t('carrer'), href: '/portfolio' },
+    { name: t('projects'), href: '/portfolio' }
   ]
 
   const changeLanguage = () => {

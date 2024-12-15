@@ -6,19 +6,12 @@ import { useTranslations } from 'next-intl'
 
 const Carrer: React.FC = () => {
   const t = useTranslations('carrer')
-  const experienceKeys = ['experience1', 'experience2', 'experience3', 'experience4'] as const
-  const educationKeys = ['education1', 'education2'] as const
+  // const experienceKeys = ['experience1', 'experience2', 'experience3', 'experience4'] as const
+  // const educationKeys = ['education1', 'education2'] as const
   const experiences = [
     {
       title: t('experiences.experience1.title'),
-      list: [
-        'Modularization and of the MVVM architecture',
-        'Android Jetpack libraries',
-        'Detekt',
-        'AWS',
-        'Jira',
-        'Accessibility'
-      ],
+      list: t('experiences.experience1.list').split('|'),
       local: t('experiences.experience1.local'),
       icon: t('experiences.experience1.icon'),
       startAt: t('experiences.experience1.startAt'),
@@ -26,14 +19,7 @@ const Carrer: React.FC = () => {
     },
     {
       title: t('experiences.experience2.title'),
-      list: [
-        'Modularization and of the MVVM architecture',
-        'Creation of tests with JUnit 5 and MockK',
-        'Android Jetpack libs',
-        'Participating in Design/Discovery processes',
-        'Integration with RESTful APIs',
-        'Detekt'
-      ],
+      list: t('experiences.experience2.list').split('|'),
       local: t('experiences.experience2.local'),
       icon: t('experiences.experience2.icon'),
       startAt: t('experiences.experience2.startAt'),
@@ -41,14 +27,7 @@ const Carrer: React.FC = () => {
     },
     {
       title: t('experiences.experience3.title'),
-      list: [
-        'Creation of new features defined by Squad',
-        'Unit tests with JUnit 5 + MockK',
-        'Android Jetpack libs',
-        'Detekt',
-        'Integration of RESTful APIs',
-        'Zendesk integration'
-      ],
+      list: t('experiences.experience3.list').split('|'),
       local: t('experiences.experience3.local'),
       icon: t('experiences.experience3.icon'),
       startAt: t('experiences.experience3.startAt'),
@@ -56,13 +35,7 @@ const Carrer: React.FC = () => {
     },
     {
       title: t('experiences.experience4.title'),
-      list: [
-        'Creation of new features & bug fixes',
-        'Firebase (Crashlytics, Messaging, App Distribution...)',
-        'Android Jetpack libs',
-        'Picasso, Glide',
-        'Android Jetpack libs'
-      ],
+      list: t('experiences.experience4.list').split('|'),
       local: t('experiences.experience4.local'),
       icon: t('experiences.experience4.icon'),
       startAt: t('experiences.experience4.startAt'),
@@ -113,11 +86,10 @@ const Carrer: React.FC = () => {
           <div>
             {experiences.map((item, index) => {
               return (
-                <div className="relative pl-8 py-4 group">
+                <div className="relative pl-8 py-4 group" key={index}>
                   <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300  before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-primary after:border-4 after:box-content after:border-primary after:rounded-full  after:-translate-x-1/2 after:translate-y-1.5">
                     <Card
                       data-aos="fade-left"
-                      key={index}
                       title={item.title}
                       list={item.list}
                       local={item.local}

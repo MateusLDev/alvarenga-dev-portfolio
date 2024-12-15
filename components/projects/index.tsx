@@ -20,42 +20,42 @@ const Projects: React.FC = () => {
       description: t('project1.description'),
       link: t('project1.link'),
       image: t('project1.image'),
-      technologies: ['MVVM', 'Dagger Hilt', 'Firebase Crashlytics']
+      technologies: t('project1.technologies').split('|')
     },
     {
       name: t('project2.name'),
       description: t('project2.description'),
       link: t('project2.link'),
       image: t('project2.image'),
-      technologies: ['Retrofit', 'Live Data', 'Room']
+      technologies: t('project2.technologies').split('|')
     },
     {
       name: t('project3.name'),
       description: t('project3.description'),
       link: t('project3.link'),
       image: t('project3.image'),
-      technologies: ['MVVM', 'Koin', 'Custom Components']
+      technologies: t('project3.technologies').split('|')
     },
     {
       name: t('project4.name'),
       description: t('project4.description'),
       link: t('project4.link'),
       image: t('project4.image'),
-      technologies: ['Figma', 'Components', 'Create Flows']
+      technologies: t('project4.technologies').split('|')
     },
     {
       name: t('project5.name'),
       description: t('project5.description'),
       link: t('project5.link'),
       image: t('project5.image'),
-      technologies: ['Kotlin', 'Firebase']
+      technologies: t('project5.technologies').split('|')
     },
     {
       name: t('project6.name'),
       description:  t('project6.description'),
       link: t('project6.link'),
       image: t('project6.image'),
-      technologies: ['Bluetooth Connection', 'Arch MVP', 'Java']
+      technologies: t('project6.technologies').split('|')
     }
   ]
 
