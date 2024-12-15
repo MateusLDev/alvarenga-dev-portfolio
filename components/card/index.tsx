@@ -36,9 +36,8 @@ const Card: React.FC<CardProps> = ({
 
       <div className="mt-1 ml-10">
         <p className="text-sm ">
-          <span className="text-white-400">{local}</span>{' '}
+          {local && <span className="text-white-400">{local} • </span>}
           <span className="text-white-100">
-            •{' '}
             <span>
               {startAt} - {AndAt}{' '}
             </span>
