@@ -51,3 +51,7 @@ html {
   @apply bg-background-primary;
   scroll-behavior: smooth;
 }
+
+section {
+  scroll-margin-top: 210px;
+}

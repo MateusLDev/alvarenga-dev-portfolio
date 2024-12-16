@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
   }
 
   return (
-    <div id="home" className="flex flex-col lg:flex-row items-center justify-center md:justify-around gap-10 lg:gap-20 mt-40 mb-20 bg-[url('/images/hero-bg-png')]">
+    <section id="home" className="flex flex-col lg:flex-row items-center justify-center md:justify-around gap-10 lg:gap-20 mt-40 mb-20 bg-[url('/images/hero-bg-png')]">
       <Image
         src="/images/hero-image-mobile.png"
         alt="Imagem do Lucas Alvarenga"
@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className="h-[560px] w-[400px] object-cover rounded-xl lg:block hidden"
       />
-    </div>
+    </section>
   )
 }
 

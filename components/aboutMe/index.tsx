@@ -8,7 +8,7 @@ const AboutMe = () => {
   const t = useTranslations('about')
 
   return (
-    <div id="about" className="bg-[#161616]" data-aos="fade-up">
+    <section id="about" className="bg-[#161616]" data-aos="fade-up">
       <p className="font-semibold text-white-400 text-center text-xl md:text-2xl">{t('title')}</p>
 
       <div className="flex flex-col md:flex-row-reverse gap-4">
@@ -46,7 +46,7 @@ const AboutMe = () => {
           height={298}
         />
       </div>
-    </div>
+    </section>
   )
 }
 export default AboutMe

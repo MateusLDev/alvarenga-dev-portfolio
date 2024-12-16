@@ -60,7 +60,7 @@ const Projects: React.FC = () => {
   ]
 
   return (
-    <div id="projects" data-aos="fade-up">
+    <section id="projects" data-aos="fade-up">
       <h1 className="text-white-500 font-semibold text-2xl text-center mb-1 mt-20">{t('title')}</h1>
       <p className="text-white-500 text-center mx-10 mb-6">{t('description')}</p>
 
@@ -131,7 +131,7 @@ const Projects: React.FC = () => {
           )
         })}
       </Swiper>
-    </div>
+    </section>
   )
 }
 

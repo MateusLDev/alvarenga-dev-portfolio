@@ -41,7 +41,7 @@ const NavBar = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
-    setShowMobileMenu(!showMobileMenu)
+    setShowMobileMenu(false)
   }
 
   const t = useTranslations('navbar')
