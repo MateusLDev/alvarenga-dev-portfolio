@@ -8,7 +8,7 @@ const AboutMe = () => {
   const t = useTranslations('about')
 
   return (
-    <div className="bg-[#161616]" data-aos="fade-up">
+    <div id="about" className="bg-[#161616]" data-aos="fade-up">
       <p className="font-semibold text-white-400 text-center text-xl md:text-2xl">{t('title')}</p>
 
       <div className="flex flex-col md:flex-row-reverse gap-4">

@@ -49,4 +49,5 @@
 
 html {
   @apply bg-background-primary;
+  scroll-behavior: smooth;
 }
