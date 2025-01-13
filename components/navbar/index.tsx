@@ -3,11 +3,10 @@
 import { useRouter, usePathname } from '@/i18n/routing'
 import { useLocale } from 'next-intl'
 import { useTranslations } from 'next-intl'
-// import Logo from '/images/logo-white.png'
-
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { MdMenu, MdClose } from 'react-icons/md'
+import logoNavbar from '../../public/images/logo-navbar.svg'
 
 const NavBar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
@@ -64,11 +63,10 @@ const NavBar = () => {
     <div className="bg-background-primary bg-opacity-10 backdrop-blur-sm border border-[#FFFFFF26] rounded-full flex items-center justify-between py-4 px-8 fixed top-10 w-full md:max-w-[700px] md:left-2/4 md:-translate-x-2/4 z-10">
       <div>
         <Image
-          className="h-6 w-full"
-          src="/images/logo-white.png"
+          src={logoNavbar}
+          quality={100}
+          priority
           alt="Logotipo primária Alvarenga Dev com texto branco e ícone azul"
-          width={200}
-          height={12}
         />
       </div>
 

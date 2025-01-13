@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfólio Alvarenga Dev
 
-## Getting Started
+Bem-vindo ao projeto do portfólio do Alvarenga Dev. Este documento fornece as instruções necessárias para configurar e executar o projeto.
 
-First, run the development server:
+## Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
+
+- **Next.js**: Framework React para produção e escalabilidade.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+- **Tailwind CSS**: Framework de utilitários para estilização rápida e responsiva.
+- **next-intl (i18n)**: Gerenciamento de internacionalização e suporte a múltiplos idiomas.
+
+## Requisitos
+
+Certifique-se de que você tenha as seguintes ferramentas instaladas em sua máquina antes de começar:
+
+- [Node.js](https://nodejs.org/) (versão 14 ou superior)
+- [npm](https://www.npmjs.com/) (gerenciador de pacotes que vem com o Node.js)
+
+## Passos para Configuração
+
+1. **Clone o repositório**:
+   ```bash
+   git clone <URL-DO-REPOSITORIO>
+   cd <NOME-DO-DIRETORIO-CLONADO>
+   ```
+
+2. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
+
+3. **Execute o projeto**:
+   ```bash
+   npm run dev
+   ```
+
+   O projeto será iniciado em modo de desenvolvimento e estará acessível no endereço [http://localhost:3000](http://localhost:3000).
+
+## Multilanguage (i18n)
+
+O projeto utiliza um fluxo de multilanguage para suportar diferentes idiomas. As traduções estão localizadas na pasta `content`, na raiz do projeto. Atualmente, estão disponíveis os seguintes arquivos:
+
+- `en.json`: Contém as traduções para o inglês.
+- `pt.json`: Contém as traduções para o português.
+
+As traduções funcionam como um dicionário para a aplicação. Para criar uma nova tradução, siga o padrão de JSON, onde as chaves devem ser consistentes entre os idiomas. Exemplo:
+
+```json
+"hero": {
+    "saudation": "Hi, I'm",
+    "saudation2": "and I craft beautiful & optimized apps.",
+    "description": "I'm Mobile developer, Speaker and Content creator at",
+    "mentoringButton": "Enter my mentoring",
+    "cvButton": "Download my CV"
+  }
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Para exibir a tradução na aplicação, é necessário realizar o import da função `useTranslations` do `next-intl` e informar inicialmente a chave-mestre de qual tradução você deseja obter o dicionário. Exemplo:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```javascript
+import { useTranslations } from 'next-intl';
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+const Example = () => {
+    const t = useTranslations('about');
 
-## Learn More
+    return (
+        <div>{t('title')}</div>
+    );
+};
+```
 
-To learn more about Next.js, take a look at the following resources:
+O código acima seria o mesmo que dizer que você está querendo acessar a chave `title` dentro de um objeto, ou seja, `about.title`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Cuidados com Traduções
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Não utilize listas/arrays**: O i18n não permite o uso de arrays. Caso seja necessário criar uma estrutura de lista, utilize uma cadeia de objetos. Exemplo:
 
-## Deploy on Vercel
+```json
+"experience1": {
+    "title": "Android Developer",
+    "list": "Modularization and of the MVVM architecture | Android Jetpack libraries | Detekt | AWS | Jira | Accessibility",
+    "local": "Itaú (@BRQ)",
+    "icon": "/itau.svg",
+    "startAt": "Dec 2023",
+    "endAt": "Currently"
+  },
+  "experience2": {
+    "title": "Mid-Level Android Engineer",
+    "list": "Modularization and of the MVVM architecture | Creation of tests with JUnit 5 and MockK | Android Jetpack libs | Participating in Design/Discovery processes | Integration with RESTful APIs | Detekt",
+    "local": "Bornlogic",
+    "icon": "/bornlogic.svg",
+    "startAt": "Jul 2022",
+    "endAt": "May 2023"
+  }
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Certifique-se de que as chaves sejam consistentes e utilizem boas práticas de nomeação.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Estrutura de Exibição do Conteúdo
+
+A aplicação está dividida em componentes, onde cada seção da página equivale a um novo componente. Alguns componentes exigem uma grande quantidade de dados para a exibição do conteúdo, como `career`, `projects` e `navbar`. Dentro de cada um deles, existe um objeto/array responsável por fazer todo o agrupamento das informações para que as mesmas sejam exibidas de maneira mais performática e simples. Caso queira modificar algo, não esqueça de alterar a estrutura e a respectiva tradução.
+
+Exemplo de componente:
+
+```javascript
+const NavBar = () => {
+    const menuLinks = [
+        { name: t('home'), href: 'home' },
+        { name: t('about'), href: 'about' },
+        { name: t('career'), href: 'career' },
+        { name: t('projects'), href: 'projects' }
+    ];
+
+    return (
+        <nav>
+            {menuLinks.map((item) => (
+                <p key={item.name}>{item.name}</p>
+            ))}
+        </nav>
+    );
+};
+```
+
+Certifique-se de que a lógica do componente seja consistente com a tradução para evitar erros na exibição.
+
+## Estrutura de Arquivos
+
+- Todos os arquivos de imagens, ícones e outros recursos devem ser armazenados na pasta `public`, localizada na raiz do projeto.
+- As imagens utilizadas no projeto devem ser salvas em `public/images`.
+- Existe um botão responsável por realizar o download do currículo, que está localizado em `public` e nomeado como `cv.pdf`. Sinta-se livre para modificar o conteúdo do arquivo, apenas lembre-se de manter o mesmo nome e o mesmo local (`/public`).
+
+
+

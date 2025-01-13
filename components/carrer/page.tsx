@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { MdSchool } from 'react-icons/md'
 import { IoFlashOutline } from 'react-icons/io5'
 import { useTranslations } from 'next-intl'
+import ExperienceImage from '../../public/images/experiences-image.svg'
 
 const Carrer: React.FC = () => {
   const t = useTranslations('carrer')
@@ -65,23 +66,22 @@ const Carrer: React.FC = () => {
   return (
     <section id="career" className="mt-20" data-aos="fade-up">
       <h1 className="text-white-500 font-semibold text-2xl text-center mb-1">{t('title')}</h1>
-      <p className="text-white-500 text-center">
-        {t('description')}
-      </p>
+      <p className="text-white-500 text-center">{t('description')}</p>
 
       <div className="mt-4 mb-4">
         <span className="text-white-500 font-semibold text-lg">{t('experiencesTitle')}</span>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 mt-4 gap-8">
-          <Image
-            className="hidden lg:block h-[1080px] w-full object-cover rounded-lg"
-            src="/images/experiences-image.png"
-            alt="Imagem de experiências"
-            height={0}
-            width={0}
-            quality={100}
-            unoptimized={true}
-          />
+          <div className="hidden lg:block">
+            <Image
+              className="max-h-[1130px] h-full w-full object-cover rounded-lg"
+              src={ExperienceImage}
+              alt="Imagem de experiências"
+              quality={100}
+              priority
+              unoptimized={true}
+            />
+          </div>
 
           <div>
             {experiences.map((item, index) => {

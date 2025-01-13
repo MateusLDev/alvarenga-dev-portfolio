@@ -3,6 +3,7 @@ import { SocialsLinks } from '@/content/data'
 import { openLink } from '@/utils/utils'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
+import AboutImage from '../../public/images/aboutMe.svg'
 
 const AboutMe = () => {
   const t = useTranslations('about')
@@ -10,19 +11,16 @@ const AboutMe = () => {
   return (
     <section id="about" className="bg-[#161616]" data-aos="fade-up">
       <p className="font-semibold text-white-400 text-center text-xl md:text-2xl">{t('title')}</p>
-
-      <div className="flex flex-col md:flex-row-reverse gap-4">
-        <div>
+      {/* flex flex-col md:flex-row-reverse */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+        <div className="md:order-2">
           <p
-            className="text-white-100 text-sm mt-4 md:text-base"
+            className="text-white-100 text-sm md:!text-base lg:text-lg"
             dangerouslySetInnerHTML={{ __html: t.raw('content') }}
           ></p>
 
           <div
-            className="flex gap-5 mt-6 cursor-pointer"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-offset="300"
+            className="flex gap-5 md:mt-2 cursor-pointer"
           >
             {SocialsLinks.map((item, index) => {
               const Icon = item.icon
@@ -38,13 +36,7 @@ const AboutMe = () => {
           </div>
         </div>
 
-        <Image
-          className="mt-6 h-72 md:h-[500px] w-full"
-          src="/images/aboutMe.png"
-          alt="About Me"
-          width={299}
-          height={298}
-        />
+        <Image className="mt-4 md:order-1 md:mt-0 h-fit" src={AboutImage} alt="About Me" priority quality={100} />
       </div>
     </section>
   )

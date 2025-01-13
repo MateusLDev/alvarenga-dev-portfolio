@@ -17,7 +17,9 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:align-baseline md:flex-row md:justify-between border-b border-background-quaternary pb-8">
           <div>
             <Image
-              src="/images/logo-white.png"
+              src="/logo-white.svg"
+              priority
+              quality={100}
               width={226}
               height={40}
               alt="logo"
