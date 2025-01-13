@@ -9,7 +9,7 @@ const AboutMe = () => {
   const t = useTranslations('about')
 
   return (
-    <div className="bg-[#161616]" data-aos="fade-up">
+    <section id="about" className="bg-[#161616]" data-aos="fade-up">
       <p className="font-semibold text-white-400 text-center text-xl md:text-2xl">{t('title')}</p>
       {/* flex flex-col md:flex-row-reverse */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
@@ -38,7 +38,7 @@ const AboutMe = () => {
 
         <Image className="mt-4 md:order-1 md:mt-0 h-fit" src={AboutImage} alt="About Me" priority quality={100} />
       </div>
-    </div>
+    </section>
   )
 }
 export default AboutMe

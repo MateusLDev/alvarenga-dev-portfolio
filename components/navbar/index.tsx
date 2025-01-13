@@ -1,25 +1,58 @@
 'use client'
 
 import { useRouter, usePathname } from '@/i18n/routing'
-import {useLocale} from 'next-intl';
+import { useLocale } from 'next-intl'
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { MdMenu, MdClose } from 'react-icons/md'
 import logoNavbar from '../../public/images/logo-navbar.svg'
 
 const NavBar = () => {
-  const t = useTranslations('navbar')
   const [showMobileMenu, setShowMobileMenu] = useState(false)
+  const [activeSection, setActiveSection] = useState('home')
+  const sections = ['home', 'about', 'career', 'projects']
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offsets = sections.map((id) => {
+        const section = document.getElementById(id)
+        return section?.getBoundingClientRect().top ?? Infinity
+      })
+
+      const activeIndex = offsets.findIndex(
+        (offset) => offset >= 0 && offset < window.innerHeight / 2
+      )
+      if (activeIndex !== -1) {
+        setActiveSection(sections[activeIndex])
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [sections])
+
+  const handleScroll = (event: React.MouseEvent<HTMLParagraphElement, MouseEvent>, id: string) => {
+    event.preventDefault()
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+    setShowMobileMenu(false)
+  }
+
+  const t = useTranslations('navbar')
   const router = useRouter()
   const pathname = usePathname()
-  const locale = useLocale();
+  const locale = useLocale()
 
   const menuLinks = [
-    { name: t('home'), href: '/' },
-    { name: t('about'), href: '/portfolio' },
-    { name: t('carrer'), href: '/portfolio' },
-    { name: t('projects'), href: '/portfolio' }
+    { name: t('home'), href: 'home' },
+    { name: t('about'), href: 'about' },
+    { name: t('carrer'), href: 'career' },
+    { name: t('projects'), href: 'projects' }
   ]
 
   const changeLanguage = () => {
@@ -39,13 +72,24 @@ const NavBar = () => {
 
       <div className="flex items-center gap-4 cursor-pointer">
         {menuLinks.map((item) => (
-          <p className="text-white-400 hover:text-primary md:block hidden" key={item.name}>
+          <p
+            key={item.name}
+            onClick={(e) => handleScroll(e, item.href)}
+            className={` ${
+              activeSection === item.href
+                ? 'text-primary font-bold'
+                : 'text-white-100 hover:text-white-500'
+            } md:block hidden`}
+          >
             {item.name}
           </p>
         ))}
-        
-        <div onClick={() => changeLanguage()} className="bg-[#2d2d2d] border border-[#3c3c3c] rounded-full p-1 px-2 text-white block text-sm">
-          {locale === 'pt' ? 'EN' : 'BR'}
+
+        <div
+          onClick={() => changeLanguage()}
+          className="bg-[#2d2d2d] border border-[#3c3c3c] rounded-full p-1 px-2 text-white block text-sm"
+        >
+          {locale === 'pt' ? 'BR' : 'EN'}
         </div>
 
         <div
@@ -64,7 +108,15 @@ const NavBar = () => {
             />
 
             {menuLinks.map((item) => (
-              <p className="text-white-400 text-2xl hover:text-primary" key={item.name}>
+              <p
+                onClick={(e) => handleScroll(e, item.href)}
+                className={` ${
+                  activeSection === item.href
+                    ? 'text-primary font-bold'
+                    : 'text-white-100 hover:text-white-500'
+                } text-2xl`}
+                key={item.name}
+              >
                 {item.name}
               </p>
             ))}

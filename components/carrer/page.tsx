@@ -64,7 +64,7 @@ const Carrer: React.FC = () => {
   ]
 
   return (
-    <div className="mt-20" data-aos="fade-up">
+    <section id="career" className="mt-20" data-aos="fade-up">
       <h1 className="text-white-500 font-semibold text-2xl text-center mb-1">{t('title')}</h1>
       <p className="text-white-500 text-center">{t('description')}</p>
 
@@ -126,7 +126,7 @@ const Carrer: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
