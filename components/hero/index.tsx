@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
   }
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center md:justify-around gap-10 lg:gap-20 mt-40 mb-20 bg-[url('/images/hero-bg-png')]">
+    <div className="flex flex-col lg:flex-row items-center justify-center md:justify-around gap-10 lg:gap-20 mt-40 mb-20">
       <Image
         src={MobileHeroImage}
         alt="Imagem do Lucas Alvarenga"
