@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Button from '../button'
 import { useTranslations } from 'next-intl'
 import { openLink } from '@/utils/utils'
+import MobileHeroImage from '../../public/images/hero-image-mobile.svg'
 
 const Hero: React.FC = () => {
   const t = useTranslations('hero')
@@ -17,10 +18,10 @@ const Hero: React.FC = () => {
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center md:justify-around gap-10 lg:gap-20 mt-40 mb-20 bg-[url('/images/hero-bg-png')]">
       <Image
-        src="/images/hero-image-mobile.png"
+        src={MobileHeroImage}
         alt="Imagem do Lucas Alvarenga"
-        height={140}
-        width={140}
+        quality={100}
+        priority
         className="mb-4 lg:hidden block"
       />
 
